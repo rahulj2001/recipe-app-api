@@ -20,7 +20,7 @@ ARG DEV=false
 # 3. install the requirements file
 # 4. check if we are in dev mode and install the dev requirements as well
 # 5. then remove the tmp dir - we dont want any extra deps - keep it lightweight
-# 6. Best practice not to use root user - so run app with a user that has limited privileges
+# 6. Best practice not to use root user - so run app with a user and group that has limited privileges
 # 7. Change the ownership of the app dir to django-user
 
 RUN python -m venv /py && \
@@ -33,12 +33,12 @@ RUN python -m venv /py && \
     adduser \
         --disabled-password \
         --no-create-home \
-        django-user && \
-    chown django-user:django-user -R /app/ && \
-    chmod 755 -R /app/
+        django-user
+
+RUN chown django-user:django-user -R /app/
 
 # update the path env variable to run python commands from py/bin
 ENV PATH="/py/bin:$PATH"
 
 # switch to new created user with limited privileges
-USER django-user
+# USER django-user
