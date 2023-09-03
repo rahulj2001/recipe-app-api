@@ -9,7 +9,7 @@ COPY ./app /app
 WORKDIR /app
 EXPOSE 8000
 
-ARG DEV=false
+ARG DEV="false"
 
 # Each line could be a separate RUN command but that would a new image layer for each command
 # This only creates one layer and is more efficient and lightweight
