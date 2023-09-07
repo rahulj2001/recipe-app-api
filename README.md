@@ -11,4 +11,4 @@ Recipe API Project
  - Github Actions - testing and linting
 
 ## TDD Methodology
-This project is developed using the Test Driven Development (TDD) methodology. This is where the unit tests for a feature/functionality is written first. Then, code is written to implement the feature so that the unit tests pass.
+This project is developed using the Test Driven Development (TDD) methodology. This is where the unit tests for a feature/functionality are written first. Then, code is written to implement the feature so that the unit tests pass.
