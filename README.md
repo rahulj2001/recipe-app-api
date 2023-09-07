@@ -10,3 +10,5 @@ Recipe API Project
  - SwaggerUI - generate automated documentation for API
  - Github Actions - testing and linting
 
+## Methodology
+This project is developed using the Test Driven Development (TDD) method. This is where the unit tests for a feature/functionality is written first. Then, code is written to implement the feature so that the unit tests pass.
